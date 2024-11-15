@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "permanent marker", cursive;
+    z-index: 1;
+    cursor: none;
+}
+.dot{
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+}
+.outline{
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    opacity: 0.5;
+}
+.dot, .outline{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: #1e1e1e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    border: 5px solid #23e701;
+    width: 90%;
+    height: 90vh;
+    background-color: #fff;
+    border-radius: 15px;
+    position: relative;
+}
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.main::after, .main::before{
+    border-radius: 15px;
+    --angle: 0deg;
+    content: "";
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 15px;
+    background: conic-gradient(from var(--angle), transparent 40%, #23e701);
+    animation: anime 2s linear infinite;
+}
+@keyframes anime {
+    0%{
+        --angle: 0deg;
+    }
+     100%{
+        --angle: 360deg;
+    } 
+}
+.main::before{
+    filter: blur(10px);
+}
+.elem{
+    color: white;
+    height: 70%;
+    width: 24%;
+    background-color: #000000;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+}
+.pannel{
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: 10vh;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+    position: relative;
+}
+.pannel::after, .pannel::before{
+    content: "";
+    position: absolute;
+    background-color: #23e701;
+    height: 5px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+.bubbles-container{
+    border-radius: 0 0 10px 10px;
+    height: calc(100% - 13.7vh);
+    width: 98.52%;
+    background-color: #000000;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-top: 5px;
+    color: white;
+}
+.bubble{
+    height: 60px;
+    width: 60px;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 800;
+}
+.bubble:hover{
+    background-color: #23e701;
+    color: #000000;
+}
+.gameOver{
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    text-align: center;
+}
+.h1{
+    color: #23e701;
+    font-family: "oxanium", sers-serif ;
+    font-size: 80px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+} .h1::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 10px;
+    width: 100%;
+    background-color: #23e701;
+}
+
+.stats-container{
+    height: 100%;
+    width: 100%;
+    padding: 60px 0 0 0;
+    color: #23e701;
+}
+h1{
+
+    color: #23e701;
+    font-family: "oxanium", sers-serif ;
+    font-size: 50px;
+    padding: 10px 0 0 0;
+    
+}
+
+.h2{
+    color: #23e701;
+    font-family: "oxanium", sers-serif ;
+    font-size: 30px;
+    position: relative;
+    display: flex;
+    margin: 0px 0px 0px 600px;
+}
+.h2::before{
+    content: "";
+    left: -30px;
+    top: 10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #23e701;
+    position: absolute;
+}
+button{
+    margin: 30px 0 0 10px ;
+    height: 50px;
+    width: 200px;
+    background-color: #000000;
+    border: 3px solid #23e701;
+    color: #23e701;
+    font-size: 20px;
+    border-radius: 10px;
+    font-family: "oxanium";
+    transition: 0.1s ease-in-out;
+}
+button:hover{
+    background-color: #23e701;
+    color: #000000;
+    border: none;
+}
+p{
+    color: white;
+}
+.a{
+    color: #23e701;
+    font-family: "oxanium";
+    padding-left: 10px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    background: inherit;
+    cursor: none;
+}

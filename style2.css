@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Oxanium", sens-serif;
+    cursor: none;
+    color: #23e701;
+} *::selection{
+    background-color: #23e701;
+    color: #000000;
+}
+.dot{
+    height: 20px;
+    width: 20px;
+    background-color: #23e701;
+}
+.outline{
+    height: 40px;
+    width: 40px;
+    background-color: #23e701;
+    opacity: 0.5;
+}
+.dot, .outline {
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+body{
+    height: 100vh;
+    background-color: #0e0e0e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game{
+    padding: 40px;
+    color: #23e701;
+    height: 550px;
+    width: 1000px;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+    border: 5px solid #23e701;
+    box-shadow: 0 0 20px #23e701;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    font-size: 80px;
+}
+.description{
+    font-size: 40px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.level{
+    font-size: 30px;
+    margin-top: 60px;
+    text-align: center;
+}
+button{
+    height: 50px;
+    width: 200px;
+    background-color: #000000;
+    border: 3px solid #23e701;
+    color: #23e701;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+}
+button:hover{
+    background-color: #23e701;
+    color: #000000;
+    border: none;
+}
+.startBtn{
+    height: 50px;
+    width: 200px;
+    background-color: #23e701;
+    border: none;
+    color: #000000;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+    font-weight: bolder;
+}
+.startBtn:hover{
+    background-color: #000000;
+    color: #23e701;
+    border: 3px solid #23e701;
+}
+.start{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 20px;
+}
+.start p{
+    margin-bottom: 10px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    background: inherit;
+    cursor: none;
+}
+
+.main{
+    border: 5px solid #23e701;
+    width: 90%;
+    height: 90vh;
+    background-color: #fff;
+    border-radius: 15px;
+    position: relative;
+    text-align: center;
+    padding: 20px 0 0 0;
+}
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.main::after, .main::before{
+    color: #23e701;
+    border-radius: 15px;
+    --angle: 0deg;
+    content: "";
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 15px;
+    background: conic-gradient(from var(--angle), transparent 40%, #23e701);
+    animation: anime 2s linear infinite;
+}
+@keyframes anime {
+    0%{
+        --angle: 0deg;
+    }
+     100%{
+        --angle: 360deg;
+    } 
+}
+.main::before{
+    filter: blur(10px);
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: #1e1e1e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

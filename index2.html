@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@500..800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="" type="x icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Bubble game</title>
+</head>
+<body>
+    <div class="dot"></div>
+    <div class="outline"></div>
+    
+    <div class="container">
+        <div class="main">
+            <div class="pannel">
+                <div class="elem">
+                    <h2>Hit: </h2>
+                    <div class="box"><h2  class="hit"> </h2></div>
+                </div>
+                <div class="elem">
+                    <h2>Timer: </h2>
+                    <div class="box"><h2 class="time"> </h2></div>
+                </div>
+                <div class="elem">
+                    <h2>Score: </h2>
+                    <div class="box"><h2  class="score"> 0</h2></div>
+                </div>
+            </div>
+            <div class="bubbles-container">
+            </div>
+
+            <!-- When time over -->
+             <div class="gameOver">
+                <div class="timeover">
+                    <h1 class="h1">TIME OVER</h1>
+                </div>
+                <div class="stats-container">
+                   <h1>Your Stats:-</h1>
+                   <h2 class="h2">Score = <span><p class="spScore a">0</p></span></h2>
+                   <h2 class="h2">Time = <span><p class="spTime a">60 Seconds</p></span></h2>
+                   <h2 class="h2">No of hits = <span><p class="spHits a">0</p></span></h2>
+                   <h2 class="h2">Acurracy = <span><p class="spAc a">0%</p></span></h2>
+                   <div class="try">
+                       <button class="try-again">Try again</button>
+                       <button><a href="index.html">Main menu</a></button>
+                   </div>
+                </div>
+             </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
