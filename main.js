@@ -10,7 +10,7 @@ window.addEventListener("mousemove", (e)=>{
     top: `${posY}px`
     }, {duration: 300, fill: "forwards"});
 });
-let timer = 20;
+let timer = 60;
 let score = 0;
 let hitrn = 0;
 let correct = 0;
@@ -30,7 +30,7 @@ function decTimer(){
         if(timer>0){
             timer--;
             document.querySelector(".time").innerHTML = timer;
-             if(timer <= 10){
+             if(timer = 10){
                  document.querySelector(".time").style.color = "red";
                  shit.play();
             } 
