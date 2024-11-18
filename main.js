@@ -30,8 +30,7 @@ function decTimer(){
         if(timer>0){
             timer--;
             document.querySelector(".time").innerHTML = timer;
-             if(timer = 10){
-                 document.querySelector(".time").style.color = "red";
+             if(timer === 10){
                  shit.play();
             } 
         }else{
